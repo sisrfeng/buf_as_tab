@@ -15,8 +15,9 @@
 ==============================================================================
 1. Intro                                                      *buftabline-intro*
 
-This plugin takes over the 'tabline' and renders the buffer list in it instead
-of a tab list. It is designed with the ideal that it should Just Work: drop it
+This plugin takes over the 'tabline' and renders the buffer list in it instead of a tab list.
+It is designed with the ideal that it should Just Work:
+drop it
 into your setup and you're done. There is only minimal configurable behavior.
 
 
@@ -24,14 +25,14 @@ into your setup and you're done. There is only minimal configurable behavior.
 2. Configuration settings                                    *buftabline-config*
 
 Changes to any of the plugin's configuration settings at runtime will not take
-effect immediately unless you force an update: >
+effect immediately unless you force an update:
+
     :call buftabline#update(0)
-<
+
 
 *g:buftabline_show*          number (default 2)
 
-    The value of this option specifies when the line with buffer labels will
-    be displayed:
+    The value of this option specifies when the line with buffer labels will  be displayed:
              0: never
              1: only if there are at least two buffers
              2: always
@@ -40,19 +41,19 @@ effect immediately unless you force an update: >
 
 *g:buftabline_numbers*       number (default 0)
 
-    The value of this option specifies how to number the buffer labels:
+    The value of this option specifies how to number the ´buffer labels´:
              0: no numbering
              1: buffer number
              2: ordinal number
-    The buffer number corresponds to Vim's internal buffer number as shown by
-    the |:ls| command, whereas the ordinal number is a simple sequential count
-    from left to right.
+    The buffer number corresponds to Vim's internal buffer number as shown by  the |:ls| command,
+    whereas the ordinal number is a simple sequential count  from left to right.
 
 
 *g:buftabline_indicators*    boolean (default off)
 
-    When on, the buffer's state is indicated in the buffer label. Currently
-    the only state indicated is whether the buffer is 'modified'.
+    When on,
+        the buffer's state is indicated in the buffer label.
+    Currently the only state indicated is whether the buffer is 'modified'.
 
 
 *g:buftabline_separators*    boolean (default off)
@@ -75,7 +76,8 @@ effect immediately unless you force an update: >
 3. Mappings                                                *buftabline-mappings*
 
 To switch buffers by their ordinal number (|g:buftabline_numbers| = 2) you can
-map keys to the |<Plug>| mappings provided by this plugin: >
+map keys to the |<Plug>| mappings provided by this plugin:
+
         nmap <leader>1 <Plug>BufTabLine.Go(1)
         nmap <leader>2 <Plug>BufTabLine.Go(2)
         nmap <leader>3 <Plug>BufTabLine.Go(3)
@@ -86,12 +88,14 @@ map keys to the |<Plug>| mappings provided by this plugin: >
         nmap <leader>8 <Plug>BufTabLine.Go(8)
         nmap <leader>9 <Plug>BufTabLine.Go(9)
         nmap <leader>0 <Plug>BufTabLine.Go(10)
-<
-There is also a |<Plug>| mapping which always switches to the last buffer: >
+
+There is also a |<Plug>| mapping which always switches to the last buffer:
+
         nmap <leader>0 <Plug>BufTabLine.Go(-1)
-<
+
 On Mac OS, you probably want to use a |<D-| mapping instead, which will emulate
-the standard Cmd+1, Cmd+2, etc. keybindings for this feature: >
+the standard Cmd+1, Cmd+2, etc. keybindings for this feature:
+
         nmap <D-1> <Plug>BufTabLine.Go(1)
         nmap <D-2> <Plug>BufTabLine.Go(2)
         nmap <D-3> <Plug>BufTabLine.Go(3)
@@ -104,7 +108,7 @@ the standard Cmd+1, Cmd+2, etc. keybindings for this feature: >
         nmap <D-0> <Plug>BufTabLine.Go(10)
         " or to go to the last buffer:
         nmap <D-0> <Plug>BufTabLine.Go(-1)
-<
+
 You can ask for more (or fewer) than the default 10 <Plug> mappings using the
 |g:buftabline_plug_max| setting.
 
@@ -141,3 +145,4 @@ https://github.com/ap/vim-buftabline
 
 
 vim:tw=78:et:ft=help:norl:
+DIY_2  vim:filetype=help:syntax=help:
